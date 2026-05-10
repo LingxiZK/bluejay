@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+*.obj
+*.lst
+*.omf
+*.sym
+*.map
+*.lnp
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Wine / Keil temp
+temp/
+*.tmp
