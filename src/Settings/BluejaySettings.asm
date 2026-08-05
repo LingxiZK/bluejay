@@ -27,16 +27,16 @@
 ;
 ;**** **** **** **** **** **** **** **** **** **** **** **** ****
 
-DEFAULT_PGM_RPM_POWER_SLOPE EQU 12      ; 0=Off,1..13 (Power limit factor in relation to rpm) — LX mod: 6→10→12
-DEFAULT_PGM_COMM_TIMING EQU 3
-DEFAULT_PGM_DEMAG_COMP EQU 3
+DEFAULT_PGM_RPM_POWER_SLOPE EQU 8       ; 0=Off,1..13 — 1202电机推力富余限功率
+DEFAULT_PGM_COMM_TIMING EQU 2           ; 1=Low..5=High — 轻载高效MediumLow
+DEFAULT_PGM_DEMAG_COMP EQU 2            ; 1=Dis,2=Low,3=High — 1S低转速Low降损耗
 DEFAULT_PGM_DIRECTION EQU 2
 DEFAULT_PGM_BEEP_STRENGTH EQU 0
 DEFAULT_PGM_BEACON_STRENGTH EQU 80      ; 0..255
 DEFAULT_PGM_BEACON_DELAY EQU 5          ; 1=1m 2=2m 3=5m 4=10m 5=Infinite
 DEFAULT_PGM_ENABLE_TEMP_PROT EQU 2
 
-DEFAULT_PGM_POWER_RATING EQU 2          ; 1=1S,2=2S+   (2S battery adaptation)
+DEFAULT_PGM_POWER_RATING EQU 1          ; 1=1S,2=2S+ — 1202电机1S配置
 
 DEFAULT_PGM_BRAKE_ON_STOP EQU 0
 DEFAULT_PGM_LED_CONTROL EQU 0           ; Byte for LED control. 2 bits per LED,0=Off,1=On
@@ -44,7 +44,7 @@ DEFAULT_PGM_LED_CONTROL EQU 0           ; Byte for LED control. 2 bits per LED,0
 DEFAULT_PGM_STARTUP_POWER_MIN EQU 115
 DEFAULT_PGM_STARTUP_BEEP EQU 1          ; 0=Short beep,1=Melody
 
-DEFAULT_PGM_STARTUP_POWER_MAX EQU 110   ; 0..255 => (1000..2000 Throttle): Maximum startup power — LX mod: 90→110
+DEFAULT_PGM_STARTUP_POWER_MAX EQU 96    ; 0..255 — 1202电机高KV启动减冲击
 DEFAULT_PGM_BRAKING_STRENGTH EQU 30
 
 DEFAULT_PGM_SAFETY_ARM EQU 0            ; EDT safety arm is disabled by default
